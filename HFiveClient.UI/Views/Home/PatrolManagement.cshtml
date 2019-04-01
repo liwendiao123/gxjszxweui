@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "巡检管理";
+}
+@section  styles{
+    <style>
+
+        body {
+            font-family: 'Microsoft YaHei, Helvetica Neue,Helvetica,Arial,sans-serif';
+            background-color: #efefef;
+        }
+
+        .weui-media-box_text .weui-media-box__title {
+            text-align: center;
+        }
+
+        .bggrey {
+            background-color: #efefef;
+        }
+
+
+        .bgwhite {
+            background-color: white;
+        }
+
+        header {
+            background: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#efefef));
+            background: -webkit-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#efefef 100%);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .burlywood {
+            color: burlywood
+        }
+
+
+        .weui-media-box .weui-btn_primary {
+            
+            color:white;
+           background-color: burlywood;
+            line-height:1.5em;
+        }
+
+
+
+        .hotlight {
+            background-color: #ff9900;
+        }
+
+  
+      
+
+        .weui-media-box h4 {
+        
+            text-align:left;
+            text-indent:1em;
+        }
+    </style>
+
+}
+<header class="bggrey">
+    <div class="wy-header-icon-back bggrey"><span></span></div>
+    <div class="wy-header-title bggrey">巡检管理.伶俐服务区</div>
+</header>
+
+
+
+
+<!-- 容器 -->
+<div class="weui-tab">
+    <div class="weui-navbar">
+  
+        <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+            公共场所
+        </a>
+        <a class="weui-navbar__item" href="#tab2">
+            保安巡逻
+        </a>
+    </div>
+    <div class="weui-tab__bd">
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <div class="weui-panel__bd">
+                <div class="weui-media-box weui-media-box_text address-list-box">
+                    <a href="@Url.Action("PatrolPublicPlaces","Home")" class="weui-btn weui-btn_primary" style="float:right;">开始巡检</a>
+                    <h4 class="weui-media-box__title" style="text-align:left;"><span>2019.2.26</span></h4>
+                    <p class="weui-media-box__desc address-txt">更新时间：2019.03.26 14：20</p>
+
+                </div>
+                <div class="weui-media-box weui-media-box_text address-list-box">
+                    <a href="@Url.Action("PatrolPublicPlaces","Home")" class="weui-btn weui-btn_primary" style="float:right;">开始巡检</a>
+                    <h4 class="weui-media-box__title" style="text-align:left;"><span>2019.2.26</span></h4>
+                    <p class="weui-media-box__desc address-txt">更新时间：2019.03.26 14：20</p>
+
+                </div>
+                <div class="weui-media-box weui-media-box_text address-list-box">
+                    <a href="@Url.Action("PatrolPublicPlaces","Home")" class="weui-btn weui-btn_primary" style="float:right;">开始巡检</a>
+                    <h4 class="weui-media-box__title" style="text-align:left;"><span>2019.2.26</span></h4>
+                    <p class="weui-media-box__desc address-txt">更新时间：2019.03.26 14：20</p>
+
+                </div>
+                <div class="weui-media-box weui-media-box_text address-list-box">
+                    <a href="@Url.Action("PatrolPublicPlaces","Home")" class="weui-btn weui-btn_primary" style="float:right;">开始巡检</a>
+                    <h4 class="weui-media-box__title" style="text-align:left;"><span>2019.2.26</span></h4>
+                    <p class="weui-media-box__desc address-txt">更新时间：2019.03.26 14：20</p>
+
+                </div>
+            </div>
+        </div>
+        <div id="tab2" class="weui-tab__bd-item">
+            <div class="weui-panel__bd">
+                <div class="weui-media-box weui-media-box_text address-list-box">
+                    <a href="javascript:void(0)" class="weui-btn weui-btn_primary" style="float:right;">开始巡检</a>
+                    <h4 class="weui-media-box__title" style="text-align:left;"><span>2019.2.26</span></h4>
+                    <p class="weui-media-box__desc address-txt">更新时间：2019.03.26 14：20</p>
+
+                </div>
+                <div class="weui-media-box weui-media-box_text address-list-box">
+                    <a href="javascript:void(0)" class="weui-btn weui-btn_primary" style="float:right;">开始巡检</a>
+                    <h4 class="weui-media-box__title" style="text-align:left;"><span>2019.2.26</span></h4>
+                    <p class="weui-media-box__desc address-txt">更新时间：2019.03.26 14：20</p>
+
+                </div>
+                <div class="weui-media-box weui-media-box_text address-list-box">
+                    <a href="javascript:void(0)" class="weui-btn weui-btn_primary" style="float:right;">开始巡检</a>
+                    <h4 class="weui-media-box__title" style="text-align:left;"><span>2019.2.26</span></h4>
+                    <p class="weui-media-box__desc address-txt">更新时间：2019.03.26 14：20</p>
+
+                </div>
+             
+            </div>
+        </div>
+
+    </div>
+</div>
+

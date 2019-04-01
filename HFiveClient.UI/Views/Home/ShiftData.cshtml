@@ -1,0 +1,267 @@
+﻿@{
+    ViewBag.Title = "交班数据";
+}
+@section  styles{
+    <style>
+
+        body {
+            font-family: 'Microsoft YaHei, Helvetica Neue,Helvetica,Arial,sans-serif';
+            background-color: #efefef;
+        }
+
+        .weui-media-box_text .weui-media-box__title {
+            text-align: center;
+        }
+
+        .bgwhite {
+            background-color: white;
+        }
+
+        header {
+            background: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#efefef));
+            background: -webkit-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#efefef 100%);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+        .bggreen {
+            background-color: aqua;
+        }
+
+        .burlywood {
+            color: burlywood
+        }
+
+        .weui-cell.nopd {
+            border-bottom: none;
+        }
+
+
+        .weui-grid {
+            padding: 5px;
+        }
+
+            .weui-grid:before, .weui-grid:after {
+                border: none;
+            }
+
+        .weui-panel__hd i {
+            float: right;
+            width: 1em;
+            height: 1em;
+            color: #666;
+        }
+
+        .weui-grid.btn {
+            width: 20%;
+            background-color: #ff9900;
+            margin-top: 10px;
+        }
+
+            .weui-grid.btn:first-child {
+                margin-left: 1em;
+                border-radius: 10px 0 0 10px
+            }
+
+            .weui-grid.btn > .weui-grid__label {
+                color: #ff9900;
+            }
+
+            .weui-grid.btn:first-child > .weui-grid__label {
+                color: white;
+            }
+
+        .bggrey {
+            background-color: #efefef;
+        }
+
+        .weui-media-box__desc {
+            margin-top: 10px;
+        }
+        .weui-flex__item {
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        p.label {
+            margin-top: 10px;
+            text-indent: 1em;
+            margin-bottom: 10px;
+        }
+    </style>
+
+}
+<header class="bggrey">
+    <div class="wy-header-icon-back bggrey"><span></span></div>
+    <div class="wy-header-title bggrey">租金管理.伶俐服务区</div>
+</header>
+<div class="weui-grids">
+
+    <a href="javacript:void(0)" class="weui-grid btn">
+
+        <p class="weui-grid__label">
+            今日
+        </p>
+    </a>
+
+    <a href="javacript:void(0)" class="weui-grid btn bggrey" style="background-color:#999;border-radius: 0 10px 10px 0">
+
+        <p class="weui-grid__label">
+            昨日
+        </p>
+    </a>
+</div>
+
+
+<!-- 容器 -->
+<div class="weui-tab">
+
+    <div class="weui-tab__bd">
+
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd"><span>南区早餐店</span><span style="color:red">【异常】</span>  <i class="fa fa-caret-down"></i></div>
+                <div class="box bggreen">
+                    <div class="weui-flex__item"><span class="well-sm">姓名</span></div>
+                    <div class="weui-flex__item">
+                        交班时间
+                    </div>
+                    <div class="weui-flex__item">
+                        差额
+                    </div>
+                    <div class="weui-flex__item">
+                        补齐
+                    </div>
+                </div>
+                <div class="box bggrey">
+                    <div class="weui-flex__item">本日</div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                </div>
+                <div class="box bgwhite">
+                    <div class="weui-flex__item">昨日</div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                </div>
+                <div class="box bggrey">
+                    <div class="weui-flex__item">本月</div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                </div>
+                <div class="box bgwhite">
+                    <div class="weui-flex__item">上周</div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd"><span>南区早餐店</span>  <i class="fa fa-caret-down"></i></div>
+                <div class="weui-panel__bd">
+                    <div class="box bggreen">
+                        <div class="weui-flex__item"><span class="well-sm">姓名</span></div>
+                        <div class="weui-flex__item">
+                            交班时间
+                        </div>
+                        <div class="weui-flex__item">
+                            差额
+                        </div>
+                        <div class="weui-flex__item">
+                            补齐
+                        </div>
+                    </div>
+                    <div class="box bggrey">
+                        <div class="weui-flex__item">本日</div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                    </div>
+                    <div class="box bgwhite">
+                        <div class="weui-flex__item">昨日</div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                    </div>
+                    <div class="box bggrey">
+                        <div class="weui-flex__item">本月</div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                    </div>
+                    <div class="box bgwhite">
+                        <div class="weui-flex__item">上周</div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                        <div class="weui-flex__item">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+

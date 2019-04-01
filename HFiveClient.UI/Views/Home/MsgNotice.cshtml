@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "消息管理";
+}
+@section  styles{
+    <style>
+        body {
+            font-family: 'Microsoft YaHei, Helvetica Neue,Helvetica,Arial,sans-serif';
+            background-color: #efefef;
+        }
+        .weui-panel__hd {
+            margin-top:1em;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .weui-media-box_text .weui-media-box__title {
+            text-align: center;
+        }
+
+        .bggrey {
+            background-color: #efefef;
+        }
+
+
+        .bgwhite {
+            background-color: white;
+        }
+
+        header {
+            background: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#efefef));
+            background: -webkit-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#efefef 100%);
+        }
+
+
+    </style>
+        
+    }
+
+    <header class="bggrey">
+        <div class="wy-header-icon-back bggrey"><span></span></div>
+        <div class="wy-header-title bggrey">租金管理.伶俐服务区</div>
+    </header>
+    <div class="weui-panel weui-panel_access bggrey">
+        <div class="weui-panel__hd bgwhite"><h4>国庆放假</h4></div>
+        <div class="weui-media-box__bd  pd-10 bgwhite">
+            <div class="weui-media-box_appmsg ord-pro-list">
+
+                <div class="weui-media-box__bd">
+                    <h1 class="weui-media-box__desc">
+                        <a href="javascript:void(0)" class="weui-flex__item">蓝之蓝蓝色瓶装经典Q7浓香型白酒</a>
+                        <a href="javascript:void(0)" class="weui-flex__item"><i class="fa fa-angle-right"></i></a>
+                    </h1>
+
+                    <div class="clear mg-t-10">
+                        <div class="wy-pro-pri fl"><em class="num font-15"></em></div>
+                        <div class="pro-amount fr"><span class="font-13"><a href="@Url.Action("MsgDetail","Home")" class="name">标志已看</a></span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="box ">@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")</div>
+
+        <div class="weui-panel__hd bgwhite"><h4>国庆放假</h4></div>
+        <div class="weui-media-box__bd  pd-10 bgwhite">
+            <div class="weui-media-box_appmsg ord-pro-list">
+
+                <div class="weui-media-box__bd">
+                    <h1 class="weui-media-box__desc">
+                        <a href="javascript:void(0)" class="weui-flex__item">蓝之蓝蓝色瓶装经典Q7浓香型白酒</a>
+                        <a href="javascript:void(0)" class="weui-flex__item"><i class="fa fa-angle-right"></i></a>
+                    </h1>
+
+                    <div class="clear mg-t-10">
+                        <div class="wy-pro-pri fl"><em class="num font-15"></em></div>
+                        <div class="pro-amount fr"><span class="font-13"><a href="@Url.Action("MsgDetail","Home")" class="name">标志已看</a></span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="box">@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")</div>
+    </div>

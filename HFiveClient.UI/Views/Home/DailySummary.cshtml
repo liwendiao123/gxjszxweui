@@ -1,0 +1,311 @@
+﻿
+@{
+    ViewBag.Title = "每日总结";
+}
+
+@section  styles{
+    <style>
+
+        body {
+            font-family: 'Microsoft YaHei, Helvetica Neue,Helvetica,Arial,sans-serif';
+            background-color: #efefef;
+        }
+
+        .weui-media-box_text .weui-media-box__title {
+            text-align: center;
+        }
+
+
+
+
+        .bgwhite {
+            background-color: white;
+        }
+
+        header {
+            background: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#efefef));
+            background: -webkit-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#efefef 100%);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .burlywood {
+            color: burlywood
+        }
+
+        .weui-cell.nopd {
+            border-bottom: none;
+        }
+
+        .ellipse {
+            text-align: center;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 8em;
+            height: 2em;
+            line-height: 2em;
+            background: #999;
+        }
+
+            .ellipse > a {
+                color: #ff9900;
+            }
+
+                .ellipse > a:first-child {
+                    float: left;
+                    width: 50%;
+                    height: 2em;
+                    color: white;
+                }
+
+        .hotlight {
+            background-color: #ff9900;
+        }
+
+        .weui-grid {
+            padding: 5px;
+        }
+
+            .weui-grid:before, .weui-grid:after {
+                border: none;
+            }
+
+        .weui-panel__hd i {
+            float: right;
+            width: 1em;
+            height: 1em;
+            color: #666;
+        }
+
+        .weui-grid.btn {
+            width: 20%;
+            background-color: #ff9900;
+            margin-top: 10px;
+        }
+
+            .weui-grid.btn:first-child {
+                margin-left: 1em;
+                border-radius: 10px 0 0 10px
+            }
+
+            .weui-grid.btn > .weui-grid__label {
+                color: #ff9900;
+            }
+
+            .weui-grid.btn:first-child > .weui-grid__label {
+                color: white;
+            }
+
+        .bggrey {
+            background-color: #efefef;
+        }
+
+        .weui-media-box__desc {
+            margin-top: 10px;
+        }
+        .weui-flex__item {
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            min-height:1em;
+        }
+    </style>
+
+}
+
+@section scripts{
+
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            backgroundColor: '#2c343c',
+
+            title: {
+                text: '营收占比',
+                left: 'center',
+                top: 20,
+                textStyle: {
+                    color: '#ccc'
+                }
+            },
+
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+
+            visualMap: {
+                show: false,
+                min: 80,
+                max: 600,
+                inRange: {
+                    colorLightness: [0, 1]
+                }
+            },
+            series: [
+                {
+                    name: '营收占比',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '50%'],
+                    data: [
+                        { value: 335, name: '便利店' },
+                        { value: 310, name: '便利店' },
+                        { value: 274, name: '便利店' },
+                        { value: 235, name: '便利店' },
+                        { value: 400, name: '便利店' }
+                    ].sort(function (a, b) { return a.value - b.value; }),
+                    roseType: 'radius',
+                    label: {
+                        normal: {
+                            textStyle: {
+                                color: 'rgba(255, 255, 255, 0.3)'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            lineStyle: {
+                                color: 'rgba(255, 255, 255, 0.3)'
+                            },
+                            smooth: 0.2,
+                            length: 10,
+                            length2: 20
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#c23531',
+                            shadowBlur: 200,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+
+                    animationType: 'scale',
+                    animationEasing: 'elasticOut',
+                    animationDelay: function (idx) {
+                        return Math.random() * 200;
+                    }
+                }
+            ]
+        };
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+
+}
+<header class="bggrey">
+    <div class="wy-header-icon-back bggrey"><span></span></div>
+    <div class="wy-header-title bggrey">每日总结.伶俐服务区</div>
+</header>
+<div class="weui-grids">
+
+    <a href="javacript:void(0)" class="weui-grid btn">
+
+        <p class="weui-grid__label">
+            今日
+        </p>
+    </a>
+
+    <a href="javacript:void(0)" class="weui-grid btn bggrey" style="background-color:#999;border-radius: 0 10px 10px 0">
+
+        <p class="weui-grid__label">
+            昨日
+        </p>
+    </a>
+</div>
+
+<div class="weui-panel__bd bgwhite">
+    <div id="container" style="height: 300px;margin-top:1em;"></div>
+</div>
+
+<!-- 容器 -->
+<div class="weui-tab">
+
+    <div class="weui-tab__bd">
+
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd"><span>经营排行</span><i class="fa fa-caret-down"></i></div>
+                <div class="box bggreen">
+                    <div class="weui-flex__item"><span class="well-sm">店铺名称</span></div>
+                    <div class="weui-flex__item">
+                        销售额
+                    </div>
+                    <div class="weui-flex__item">
+                        占比
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class="box bggrey">
+                    <div class="weui-flex__item"></div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                   
+                </div>
+                <div class="box bgwhite">
+                    <div class="weui-flex__item"></div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    
+                </div>
+                <div class="box bggrey">
+                    <div class="weui-flex__item"></div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class="box bgwhite">
+                    <div class="weui-flex__item"></div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                    <div class="weui-flex__item">
+
+                    </div>
+                   
+                </div>
+
+            </div>
+        
+        </div>
+
+
+
+
+

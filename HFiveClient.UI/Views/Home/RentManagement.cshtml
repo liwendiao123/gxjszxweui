@@ -1,0 +1,306 @@
+﻿
+@{
+    ViewBag.Title = "租金管理";
+}
+@section  styles{
+    <style>
+
+        body {
+            font-family: 'Microsoft YaHei, Helvetica Neue,Helvetica,Arial,sans-serif';
+            background-color: #efefef;
+        }
+
+        .weui-media-box_text .weui-media-box__title {
+            text-align: center;
+        }
+
+        .bggrey {
+            background-color: #efefef;
+        }
+
+
+        .bgwhite {
+            background-color: white;
+        }
+
+        header {
+            background: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#efefef));
+            background: -webkit-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#efefef 100%);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .burlywood {
+            color: burlywood
+        }
+
+        .weui-cell.nopd {
+            border-bottom: none;
+        }
+
+        .ellipse {
+            text-align: center;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 8em;
+            height: 2em;
+            line-height: 2em;
+            background: #999;
+        }
+
+            .ellipse > a {
+                color: #ff9900;
+            }
+
+                .ellipse > a:first-child {
+                    float: left;
+                    width: 50%;
+                    height: 2em;
+                    color: white;
+                }
+
+        .hotlight {
+            background-color: #ff9900;
+        }
+
+        .weui-grid {
+            padding: 5px;
+        }
+
+            .weui-grid:before, .weui-grid:after {
+                border: none;
+            }
+
+        .weui-panel__hd i {
+            float: right;
+            width: 1em;
+            height: 1em;
+            color: #666;
+        }
+    </style>
+
+}
+<header class="bggrey">
+    <div class="wy-header-icon-back bggrey"><span></span></div>
+    <div class="wy-header-title bggrey">租金管理.伶俐服务区</div>
+</header>
+
+
+<div class="weui-panel__bd bgwhite" style="margin:1em;">
+    <div class="weui-media-box weui-media-box_text bgwhite">
+        <div class="weui-cell nopd weui-cell_access bgwhite">
+
+            <div class="weui-cell__bd weui-cell_primary bgwhite">
+                <p class="bgwhite">未收总额</p>
+            </div>
+            <span class="right  burlywood bgwhite">未缴门店90个</span>
+        </div>
+        <h4 class="weui-media-box__title text-center burlywood font-20 bgwhite">￥<em class="num">500.0</em></h4>
+
+    </div>
+</div>
+
+<!-- 容器 -->
+<div class="weui-tab">
+    <div class="weui-navbar">
+        @*<div class="weui-flex">
+                <div class="filter ellipse">
+                    <a href="#tab1" class="weui-navbar__item weui-bar__item--on">门店</a>
+                    <a href="#tab2" class="weui-navbar__item">时间</a>
+                </div>
+            </div>*@
+        <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+            门店
+        </a>
+ 
+    </div>
+    <div class="weui-tab__bd">
+       
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd"><span>南区早餐店</span>  <i class="fa fa-caret-down"></i></div>
+                <div class="weui-panel__bd">
+                    <div class="weui-grids">
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                时间
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                欠费
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                缴费
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                2018.01
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                2018.02
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd"><span>南区早餐店</span>  <i class="fa fa-caret-down"></i></div>
+                <div class="weui-panel__bd">
+                    <div class="weui-grids">
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                时间
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                欠费
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                缴费
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                2018.01
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                2018.02
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd"><span>南区早餐店</span>  <i class="fa fa-caret-down"></i></div>
+                <div class="weui-panel__bd">
+                    <div class="weui-grids">
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                时间
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                欠费
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                缴费
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                2018.01
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                2018.02
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+                        <a href="" class="weui-grid js_grid">
+                            <p class="weui-grid__label">
+                                1000元
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

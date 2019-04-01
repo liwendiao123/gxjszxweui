@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "登录";
+}
+@section styles{
+    <style>
+
+    
+
+        .common-div > input {
+            border-bottom: solid 1px #333;
+            color:black;
+            padding-left:5px;
+        }
+
+       .common-div > input.rememberchecked {
+            width: 1em;
+            height: 1em;
+            margin-top: 0.25em;
+        }
+        .common-div > span.remembercheck {
+            float: left;
+            margin-left: 1.5em;
+        }
+        .lg-title {
+            color: #666;
+        }
+        .forgets > a {
+            color:#333;
+            opacity:1;
+        }
+
+    </style>
+    }
+<div class="login-box">
+    <div class="lg-title">业务管理</div>
+    <div class="login-form">
+        <form action="#">
+            <div class="login-user-name common-div">
+                @*<span class="eamil-icon common-icon">
+                   
+                    <img src="~/Content/images/eamil.png" />
+                </span>*@
+                <input type="email" name="username" value="" placeholder="请输入您的手机号" />
+            </div>
+            <div class="login-user-pasw common-div">
+                @*<span class="pasw-icon common-icon">
+                    <img src="~/Content/images/password.png" />
+                </span>*@
+                <input type="password" name="password" value="" placeholder="请输入您的密码" />
+            </div>
+
+            <div class="common-div">
+                <input type="checkbox" checked class="rememberchecked" />
+
+                <span class="remembercheck">记住密码 </span>
+                <span class="remembercheck right" style="float:right;color:cornflowerblue" >忘记密码？ </span>
+            </div>
+            <a href="javascript:;" class="login-btn common-div">登陆</a>
+      
+        </form>
+    </div>
+    @*<div class="forgets">
+        <a href="psd_chage.html">记住密码？</a>
+        <a href="regist.html">免费注册</a>
+    </div>*@
+</div>
+@*<script src="lib/jquery-2.1.4.js"></script>
+    <script src="lib/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.Spinner.js"></script>*@
+
+@section scripts{
+   
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script>
+    </script>
+}
+
+

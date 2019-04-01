@@ -1,0 +1,183 @@
+﻿@{
+    ViewBag.Title = "主页";
+}
+@section styles{
+    <style>
+        header {
+            background-color:#eee;      
+        }
+        .weui-panel__hd:after {
+            left: 0px;
+        }
+        .weui-panel:before {           
+             border-top: 0px solid #e5e5e5;      
+        }
+        .box {
+            display: flex;
+            border-bottom: 0.5px solid #eee;
+        }
+        .box .item {
+            width:50%;
+            text-align:center;
+        }
+
+        .box .item > a {
+            display: flex;
+            justify-content: center;
+            border-right: 1px solid #eee;
+        }
+
+        .box .item > a > i, .box .item > a > span {
+            line-height: 2em;
+            height: 2em;
+        }
+
+        .box .item > a > span {
+            margin-left: 10px;
+            padding-top: 0.8em;
+            padding-bottom: 0.5em;
+            font-size: 0.5em;
+        }
+
+        .box .item > a:after {
+            border-right: 1px solid #eee;
+        }
+        .pre-video-box-item {
+            margin:1em;
+            position:relative;
+        }
+            .pre-video-box-item > img {
+            
+                width:100%;
+            }
+            .pre-video-box-item > a.weui-btn {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                background-color: burlywood;
+                color: white;
+                font-size:14px;
+            }
+        .pre-video-box-item > p {
+            
+           background-color:#eee; 
+        }
+
+
+        .box.bottom {
+            justify-content: center;
+            border-bottom: none;
+            margin-bottom: 1em;
+        }
+
+        .pre-video {
+            justify-content: center;
+            border-bottom: none
+        }
+
+    </style>
+
+}
+<header>
+    <div class="wy-header-icon-back"><span></span></div>
+    <div class="wy-header-title">伶俐服务区</div>
+</header>
+<div class="weui-panel weui-panel_access" style="border-top:none;">
+    <div class="weui-panel__hd">日产管理</div>
+
+    <div class="box">
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-trash fa-lg"></i><span class="fa fa-lg">垃圾费用</span>
+            </a>
+
+        </div>
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-s15 fa-lg"></i><span class="fa fa-lg">水费管理</span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-fire-extinguisher fa-lg"></i><span class="fa fa-lg">巡查管理</span>
+            </a>
+
+        </div>
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-gears fa-lg"></i><span class="fa fa-lg">电费管理</span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-vcard-o fa-lg"></i><span class="fa fa-lg">租金管理</span>
+            </a>
+
+        </div>
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-rss-square fa-lg"></i><span class="fa fa-lg">消息通告</span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="weui-panel__hd">数据中心</div>
+
+
+    <div class="box">
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-database fa-lg"></i><span class="fa fa-lg">营业概况</span>
+            </a>
+
+        </div>
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-glass fa-lg"></i><span class="fa fa-lg">日结数据</span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-area-chart fa-lg"></i><span class="fa fa-lg">交班数据</span>
+            </a>
+
+        </div>
+        <div class="item">
+            <a class="btn btn-danger" href="#">
+                <i class="fa fa-bar-chart fa-lg"></i><span class="fa fa-lg">每日汇总</span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="weui-panel__hd" style="border:none;">服务区监控</div>
+
+    <div class="pre-video box">
+        <div class="pre-video-box-item">
+            <a href="javascript:void(0);" class="weui-btn">可观看</a>
+            <img src="~/Content/images/u73.jpg" />
+            <p>伶俐服务区</p>
+
+        </div>
+    </div>
+
+    <div class="box bottom" >
+       <span>已到底部</span>
+
+    </div>
+
+
+</div>

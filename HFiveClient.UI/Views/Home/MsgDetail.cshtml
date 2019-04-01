@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "消息详情";
+}
+
+@section styles{
+    <style>
+        .box, .rowbox {
+            display: flex;
+            justify-content: center;
+            position:relative;
+        }
+        .rowbox {        
+            flex-direction:column;
+            text-align:center;          
+        }
+        .header.rowbox {
+            margin-top: 2em;
+            margin-bottom:2em;
+        }
+        i.icon {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+
+            color:orangered;
+        }
+    </style>
+    
+    }
+
+<div class="box">
+    <i class="fa fa-times fa-lg icon"></i>
+    <div class="rowbox header">
+        <h3 >国庆放假</h3>
+        <small>@DateTime.Now.ToString("yyyy-MM-dd HH:mm")</small>
+    </div>
+</div>
+
+<div class="box">
+   
+    <p style="width:100%;text-align:left;text-indent:2em;">
+        2019年的国庆假期放假15天
+    </p>
+    
+
+   
+
+</div>

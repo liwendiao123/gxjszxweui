@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewBag.Title = "日结数据";
+}
+@section  styles{
+    <style>
+
+        body {
+            font-family: 'Microsoft YaHei, Helvetica Neue,Helvetica,Arial,sans-serif';
+            background-color: #efefef;
+        }
+
+        .weui-media-box_text .weui-media-box__title {
+            text-align: center;
+        }
+
+       
+
+
+        .bgwhite {
+            background-color: white;
+        }
+
+        header {
+            background: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#efefef));
+            background: -webkit-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#efefef 100%);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .burlywood {
+            color: burlywood
+        }
+
+        .weui-cell.nopd {
+            border-bottom: none;
+        }
+
+        .ellipse {
+            text-align: center;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 8em;
+            height: 2em;
+            line-height: 2em;
+            background: #999;
+        }
+
+            .ellipse > a {
+                color: #ff9900;
+            }
+
+                .ellipse > a:first-child {
+                    float: left;
+                    width: 50%;
+                    height: 2em;
+                    color: white;
+                }
+
+        .hotlight {
+            background-color: #ff9900;
+        }
+
+        .weui-grid {
+            padding: 5px;
+        }
+
+            .weui-grid:before, .weui-grid:after {
+                border: none;
+            }
+
+        .weui-panel__hd i {
+            float: right;
+            width: 1em;
+            height: 1em;
+            color: #666;
+        }
+
+        .weui-grid.btn {
+            width:20%;
+            background-color:#ff9900;
+            margin-top:10px;
+           
+        }
+            .weui-grid.btn:first-child {
+                margin-left: 1em;
+                border-radius: 10px 0 0 10px
+            }
+            .weui-grid.btn > .weui-grid__label {
+                color: #ff9900;
+                
+            }
+
+            .weui-grid.btn:first-child > .weui-grid__label {
+                color: white;
+                
+            }
+   
+        .bggrey {
+            background-color: #efefef;
+        }
+
+        .weui-media-box__desc {
+            margin-top:10px;
+        }
+    </style>
+
+}
+<header class="bggrey">
+    <div class="wy-header-icon-back bggrey"><span></span></div>
+    <div class="wy-header-title bggrey">租金管理.伶俐服务区</div>
+</header>
+<div class="weui-grids">
+
+    <a href="javacript:void(0)" class="weui-grid btn">
+        
+        <p class="weui-grid__label">
+            今日
+        </p>
+    </a>
+
+    <a href="javacript:void(0)" class="weui-grid btn bggrey" style="background-color:#999;border-radius: 0 10px 10px 0">
+       
+        <p class="weui-grid__label">
+           昨日
+        </p>
+    </a>
+</div>
+
+<div class="weui-panel__bd bgwhite" style="margin:1em;">
+    <div class="weui-media-box weui-media-box_text bgwhite">
+        <div class="weui-cell nopd weui-cell_access bgwhite">
+
+            <div class="weui-cell__bd weui-cell_primary bgwhite">
+                <p class="bgwhite">短款</p>
+            </div>
+            <span class="right  burlywood bgwhite">短款门店10个</span>
+        </div>
+        <h4 class="weui-media-box__title text-center burlywood font-20 bgwhite">￥<em class="num">500.0</em></h4>
+
+    </div>
+</div>
+
+<!-- 容器 -->
+<div class="weui-tab">
+
+    <div class="weui-tab__bd">
+
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+         
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd"><span>南区早餐店</span><span style="color:red">【异常】</span>  <i class="fa fa-caret-down"></i></div>
+                <div class="weui-panel__bd">
+                    <div class="weui-media-box weui-media-box_text">
+
+                        <p class="weui-media-box__desc">结账时间：645564231654564</p>
+                        <p class="weui-media-box__desc">应收金额：645564231654564</p>
+                        <p class="weui-media-box__desc">现金缴款：645564231654564</p>
+                        <p class="weui-media-box__desc">移动支付：645564231654564</p>
+                        <p class="weui-media-box__desc">其他支付：645564231654564</p>
+                        <p class="weui-media-box__desc">  长短款：645564231654564</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd"><span>南区早餐店</span>  <i class="fa fa-caret-down"></i></div>
+                <div class="weui-panel__bd">
+                    <div class="weui-media-box weui-media-box_text">
+
+                        <p class="weui-media-box__desc">结账时间：645564231654564</p>
+                        <p class="weui-media-box__desc">应收金额：645564231654564</p>
+                        <p class="weui-media-box__desc">现金缴款：645564231654564</p>
+                        <p class="weui-media-box__desc">移动支付：645564231654564</p>
+                        <p class="weui-media-box__desc">其他支付：645564231654564</p>
+                        <p class="weui-media-box__desc">  长短款：645564231654564</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+

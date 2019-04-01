@@ -1,0 +1,267 @@
+﻿
+@{
+    ViewBag.Title = "保安巡查";
+}
+
+@section  styles{
+    <style>
+        body {
+            font-family: 'Microsoft YaHei, Helvetica Neue,Helvetica,Arial,sans-serif';
+            background-color: #efefef;
+        }
+
+        header {
+            background: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#efefef));
+            background: -webkit-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#efefef 100%);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .bggrey {
+            background-color: #efefef;
+        }
+
+
+        .bgwhite {
+            background-color: white;
+        }
+
+        .burlywood {
+            color: burlywood
+        }
+
+        .desc > span {
+            padding-left: 1em;
+        }
+
+        header {
+            background: -moz-linear-gradient(top, #efefef 0%, #efefef 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#efefef));
+            background: -webkit-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -o-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: -ms-linear-gradient(top, #efefef 0%,#efefef 100%);
+            background: linear-gradient(to bottom, #efefef 0%,#efefef 100%);
+        }
+
+        .wy-header-title {
+            text-align: left;
+        }
+
+            .wy-header-title i {
+                margin-left: 0.5em;
+            }
+
+        .weui-icon-cancel {
+            color: #2f2726;
+            font-size: 22px;
+        }
+
+
+
+        /*select  css美化 start*/
+
+        .posirelative {
+            position: relative;
+        }
+
+        .select-out-div {
+            width: 160px;
+            overflow: hidden;
+        }
+
+        select.m-wrap {
+            background-color: #ffffff;
+            background-image: none !important;
+            filter: none !important;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            height: 25px !important;
+            line-height: 25px;
+        }
+
+        .select-hide-span {
+            height: 25px;
+            position: absolute;
+            top: 0;
+            border-right: 1px solid #e5e5e5;
+            right: 0;
+            width: 20px !important;
+            z-index: 999;
+        }
+
+        .select-show-b {
+            border-color: #888 transparent transparent transparent;
+            border-style: solid;
+            border-width: 5px 4px 0 4px;
+            margin-left: -4px;
+            margin-top: 10px;
+            position: absolute;
+        }
+        /*select css美化-----结束*/
+
+        .weui-content.filter {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .js_grid {
+            width: 50%;
+        }
+
+        .weui-uploader__file {
+            width: 30%;
+        }
+    </style>
+
+}
+<header class="bggrey">
+    <div class="wy-header-icon-back bggrey"><span></span></div>
+    <div class="wy-header-title bggrey">巡检管理.伶俐服务区<i class="fa fa-map-marker fa-lg"></i></div>
+</header>
+
+
+<div class="box">
+    <div class="desc weui-flex__item">
+        <span>伶俐服务区</span>
+    </div>
+    <a href="javascript:;">
+        <i class="fa fa-window-close fa-lg"></i>
+    </a>
+</div>
+
+
+<div class="weui-content filter">
+    <a class="weui-flex__item" style="padding-left:1em;">@DateTime.Now.ToString("yyyy-MM-dd HH:mm")</a>
+    <a style="text-align:center;">
+        <label style="margin-left:1em;"> 状态：</label>
+
+        <span class=" posirelative select-out-div we">
+            <select class="m-wrap  ">
+                <option value="0">已检查</option>
+                <option value="1">未检查</option>
+
+            </select>
+            @*<span class="select-hide-span">
+                    <b class="select-show-b"></b>
+                </span>*@
+        </span>
+    </a>
+</div>
+
+<div class="weui-tab__bd">
+    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+        <div class="weui-uploader__hd">
+            <a class="weui-flex__item" style="margin:0.2em;"><span>添加照片</span></a>
+            <a class="weui-flex__item"  style="margin:0.2em;"><span>拍照上传</span></a>
+            <a class="weui-flex__item"><span></span></a>
+            <a class="weui-flex__item"><span></span></a>
+        </div>
+        <div class="weui-panel weui-panel_access" style="margin-top:0px;">
+            <div class="weui-panel__bd">
+                <div class="weui-grids">
+                    <a href="javascript:void(0)" class="weui-grid js_grid">
+                        <p class="weui-grid__label">
+                            区域
+                        </p>
+                    </a>
+                    <a href="javascript:void(0)" class="weui-grid js_grid">
+
+                        <p class="weui-grid__label">
+                            检查情况
+                        </p>
+                    </a>
+
+                    <a href="javascript:void(0)" class="weui-grid js_grid">
+                        <p class="weui-grid__label">
+                            东区厕所
+                        </p>
+                    </a>
+                    <a href="javascript:void(0)" class="weui-grid js_grid">
+
+                        <p class="weui-grid__label">
+
+                            <span class=" weui-flex__item"><i class="fa fa-circle-o-notch"></i></span>
+                            <span class=" weui-flex__item"><i class="fa fa-circle-o-notch"></i></span>
+                        </p>
+
+                    </a>
+
+                    <a href="javascript:void(0)" class="weui-grid js_grid">
+                        <p class="weui-grid__label">
+                            南区厕所
+                        </p>
+                    </a>
+
+                    <a href="javascript:void(0)" class="weui-grid js_grid">
+                        <p class="weui-grid__label">
+
+                            <span class=" weui-flex__item"><i class="fa fa-circle-o-notch"></i></span>
+                            <span class=" weui-flex__item"><i class="fa fa-circle-o-notch"></i></span>
+                        </p>
+                    </a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+        <div class="weui-cell__bd">
+            <div class="weui-uploader">
+                <div class="weui-uploader__hd">
+                    @*<p class="weui-uploader__title font-14">图片上传</p>
+                        <div class="weui-uploader__info font-12">0/6</div>*@
+                </div>
+                <div class="weui-uploader__hd">
+                    <a class="weui-flex__item"><span>添加照片</span></a>
+                    <a class="weui-flex__item"><span>拍照上传</span></a>
+                    <a class="weui-flex__item" style="text-align:right"><i class="fa fa-trash-o fa-lg"></i></a>
+                </div>
+                <div class="weui-uploader__bd">
+                    <ul class="weui-uploader__files" id="uploaderFiles">
+
+                        <li class="weui-uploader__file" style="background-image:url(../Content/images/pic_160.png)"></li>
+                        <li class="weui-uploader__file" style="background-image:url(../Content/images/pic_160.png)"></li>
+                        <li class="weui-uploader__file" style="background-image:url(../Content/images/pic_160.png)"></li>
+                        <li class="weui-uploader__file" style="background-image:url(../Content/images/pic_160.png)"></li>
+                        <li class="weui-uploader__file" style="background-image:url(../Content/images/pic_160.png)"></li>
+                        <li class="weui-uploader__file" style="background-image:url(../Content/images/pic_160.png)"></li>
+                        @*<li class="weui-uploader__file weui-uploader__file_status" style="background-image:url(../Content/images/pic_160.png)">
+                                <div class="weui-uploader__file-content">
+                                    <i class="weui-icon-warn"></i>
+                                </div>
+                            </li>
+                            <li class="weui-uploader__file weui-uploader__file_status" style="background-image:url(../Content/images/pic_160.png)">
+                                <div class="weui-uploader__file-content">50%</div>
+                            </li>*@
+                    </ul>
+                    <div class="weui-uploader__input-box">
+                        <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
